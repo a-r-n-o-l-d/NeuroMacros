@@ -36,19 +36,19 @@ macro "Intersect with Action Tool - C251DdeCfffD00D01D02D03D04D05D06D07D08D09D0a
 	setBatchMode("exit and display");
 }
 /*
- * Sélectionne dans src uniquement les paires (obj1, obj2) définies dans lst
- * src : volume avec les étiquettes des objets à filtrer (e.g. fentes synaptiques)
- * lbl1 : volume avec les étiquettes obj1 
- * lbl2 : volume avec les étiquettes obj2
- * list : chemin vers le fichier contenant les paires (obj1, obj2)
+ * Select in src only the pairs (obj1, obj2) defined in lst
+ * src: volume with the object labels to filter (e.g. synaptic clefts)
+ * lbl1: volume with the obj1 labels
+ * lbl2: volume with the obj2 labels
+ * list: path to the file containing the pairs (obj1, obj2)
  * 
- * => I1 = intersect(lbl1, lbl2) : intersection avec les étiquettes de lbl1
- * => I2 = intersect(lbl2, lbl1) : intersection avec les étiquettes de lbl2
+ * => I1 = intersect(lbl1, lbl2): intersection with the labels of lbl1
+ * => I2 = intersect(lbl2, lbl1): intersection with the labels of lbl2
  * Res = zeros()
- * Pour chaque paire (obj1_i, obj2_i) : 
+ * For each pair (obj1_i, obj2_i): 
  * 	1) M = (I1==obj1_i) && (I2==obj2_i)
  * 	2) Res = max(Res, M)
- * étiqueter Res
+ * label Res
 macro "Filter by pair Action Tool - C251DdeCfffD00D01D02D03D04D05D06D07D08D09D0aD0bD0cD0dD0eD0fD10D11D12D13D14D15D16D17D18D19D1aD1eD1fD20D21D22D23D24D25D26D27D28D2fD30D31D32D33D34D35D36D37D3fD40D41D42D43D45D46D47D4fD50D51D52D55D56D5fD60D61D6cD6dD6eD6fD70D7bD7cD7dD7eD7fD80D8bD8cD8dD8eD8fD90D91D9cD9dD9eD9fDa0Da1Da2Da6DafDb0Db1Db2Db3Db5Db6Db7DbfDc0Dc1Dc2Dc3Dc4Dc5Dc6Dc7DcfDd0Dd1Dd2Dd3Dd4Dd5Dd6Dd7Dd8DdfDe0De1De2De3De4De5De6De7De8De9DeaDeeDefDf0Df1Df2Df3Df4Df5Df6Df7Df8Df9DfaDfbDfcDfdDfeDffC8b7Db4C5a5D65C9b9D6bC483D3eC9b8D9bC7a7D7aCdedDa7C373D5eDc9C8b8Db8C6b5D54Cad9D84C5a4D58C9c8D3bD44D4aD59D69D77D78D86D87C7b7D64D68D79D92DbbDbcDcbCefeD38C262DadDddC8c7D63D72C6a5D2aD67C9c9D76C594D2dDabC8c8D4bD71D88C7b6D93CeeeDc8DebDecDedC383D4eD5dC8c8D3cD4cD5aD81D99C7b6D98Da3CbdbDd9C5a5D2bD39D66Da4CefeD1bD1cD1dC262DaeC7c7D53D82C6a5D5bD6aD95Db9C9c9D48C483D2eD5cDa8C7b7D49D89CdedD57Da5C8c8D3dC6a6DcaCad9D73D74D83C595D97D9aC372DacDdbDdcC7c7DaaDbaC9d9D75D85C594D2cD96C7b7DccC373DdaC7b6DbdDcdCcecD29C262DbeDceC8b7D3aD94C8c7D4dD62Da9C7a6D8a"
 {
 	imgs = getImageList();
