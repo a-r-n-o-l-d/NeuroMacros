@@ -50,8 +50,8 @@ zVal = newArray(d);
 
 setBatchMode(true);
 
-// CALCUL DES DECALAGES
-// Premier slice
+// CALCULATION OF SHIFTS
+// First slice
 selectWindow(name);
 setSlice(1);
 run("Duplicate...", "use");
@@ -86,14 +86,14 @@ for (z = 1; z < d; z++)
 }
 closeWindow(zCurrent);
 
-// Sorties graphiques pour vérification
+// Graphical outputs for verification
 Plot.create("DXCUMUL", "X-axis Label", "Y-axis Label", zVal, dX);
 Plot.show();
 Plot.create("DYCUMUL", "X-axis Label", "Y-axis Label", zVal, dY);
 Plot.show();
 
-// RECALAGE
-// Estimation 
+// REALIGNMENT
+// Estimation
 Array.getStatistics(dX, dXmin, dXmax);
 left = 0;
 right = 0;
