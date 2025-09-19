@@ -200,7 +200,8 @@ function closeWindow(title)
 function register(img1, img2)
 {
 	print("\\Clear");
-	run("Phase Correlator 2D", "image_1=" + img2 + " image_2=" + img1 + " window_type=HAMMING");
+	run("Phase Only Correlation", "image_1=" + img2 + " image_2=" + img1 + " window_type=HAMMING");
+	//run("Phase Only Correlation", "image_1=slice_00897_z=3.9150um image_2=slice_00896_z=3.9121um window_type=HAMMING");
 	deltas = split(getInfo("log"), " ");
 
 	dX = 0.0 + deltas[0];
